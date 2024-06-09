@@ -1,7 +1,8 @@
 # Fruit Maturity Detection
 We recently worked on this deep-learning model. We created a model to detect the maturity level of the fruit through the image. We made our own dataset using 5 classes (five different fruits), categorizing them into 3 types: Unripe, Fresh, and Rot. We trained the model with different architectures and got the best accuracy for CNN (Convolutional Neural Networks) architecture. We tried changing the number of dense layers, convolutional layers, max-pooling layers and epoch values to gain maximum accuracy. We received an accuracy of 90.24% after testing the model. 
 
-I.	INTRODUCTION
+## INTRODUCTION
+
 Due to the presence of various vitamins, accessibility, and feasibility of the fruits, they have always had a major contribution to human health and nutrition. There are some nutrients that only fruits can provide such as vitamin C, potassium, and folate. The major constituent responsible for the favourable illustration of fruits is their quality. However, according to the UN, almost 50% of the fruits and vegetables harvested globally are squandered every year due to the lack of proper storage. Therefore, there should be a method to determine the maturity level of harvested crops. The basic measure of quality for most of the fruits is their maturity. Also, harvesting during the proper maturity period is one of the main constraints for determining the quality and shelf life of the fruits. Recognizing the ripeness of fruits by humans is a wearisome, labour-intensive, expensive, error-prone, difficult, and sluggish task. Therefore, a mechanized system of fruit and its ripening detection is essential. This will reduce the manpower and time taken for such tasks. It will also improve the accuracy of the task and remove any chances of human error. 
 The fruit quality relies upon the fruit images that illustrate various characteristics like appearance, texture, and dimensions of the fruit. Colour is the major attribute to differentiates the maturity of various fruits like apples, papayas, bananas, tangerines, mangoes, pears, and oranges. For example, oranges are green when they are unripe and turn orange when they are ripe. The same is the case with papaya as it is green and turns yellow when it is ripe.
 The discernible properties of these fruits are utilized to predict their maturity, which is forecasted by their colour, size, texture, and shape. This recognition process is achieved utilizing a visual examination, based on knowledge of the color, size, and texture. This research work focuses on distinguishing the fruits according to their maturity, considering the unripe, fresh, and rotten stages of the given fruits: red apple, papaya, pear, cherry, and orange. So here, using convolutional neural networks (CNN) algorithm. 
@@ -9,7 +10,7 @@ This work demonstrated the viability of our point of view by using a dataset con
 
 In paper [4] authors have introduced a dataset Fruits-360 which contains various images of fruits but they are only segregated based on the type of fruit and not on their level of maturity or ripeness. They have also trained a deep neural network that could identify fruits. The fruits were sorted based on the type. We have used images of fruits from dataset Fruits 360 and segregated them according to their ripeness. In paper [1], authors have used modified VGG-16 to classify papaya into three categories: mature, partially mature, and immature. The dataset presented in this was very small. In paper [2] authors have tried to combine RGB and NIR multi-model images inside a DCNN framework for fruit detection.
 
-II.	METHODOLOGY
+##  METHODOLOGY
 
 1.	Dataset
 We have used the Fruits-360 dataset by extracting images from recording videos of fruits. The images from the **Fruits-360** dataset were not annotated or segregated according to the ripeness or maturity but instead according to the type of fruit. The dataset did not contain the images for all the 3 stages of every fruit so we captured and added them to the existing dataset. The videos were captured under proper illumination and plain white background. After recording, the video frames were extracted from the videos. We have used the OpenCV python library to extract frames from the video. After extracting the videos, we removed the background, reduced the noise from the images, and then cropped the image to focus on the fruit for better feature extractions. The preprocessing of images is depicted in Fig 1. The training dataset contains a total of **9997 images** of 5 different types of fruits which include _orange, pear, cherry, apple, and papaya_. There are a total of **15 classes** as we have divided each fruit into 3 categories: 
@@ -18,7 +19,7 @@ We have used the Fruits-360 dataset by extracting images from recording videos o
 3.	Rot
 
 
-	![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/a8b1f974-b558-4e3f-ad9d-80d4263388d8) ----> ![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/40b0b927-e0b8-49cd-ac9e-463cda931f93)  -----> ![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/774a137d-8279-47de-9952-79f8a1e1e9b4)
+	![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/a8b1f974-b558-4e3f-ad9d-80d4263388d8)      ---->      ![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/40b0b927-e0b8-49cd-ac9e-463cda931f93)       ----->        ![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/774a137d-8279-47de-9952-79f8a1e1e9b4)
 
 
 
