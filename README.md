@@ -107,10 +107,10 @@ Layer Configuration	Training Accuracy	Testing Accuracy
 
 Table 3: Results of testing the model using final 11-layer configuration with constant epoch value = 40 on the dataset based on different values for batch size
 
-   Batch Size	      Testing Accuracy
-+	8                   90.24
-+	16	            90.00
-+	32	            87.31
+   Batch Size	   ------->     Testing Accuracy
++	8          ------->        90.24
++	16	   ------->        90.00
++	32	   ------->        87.31
 
 
  
