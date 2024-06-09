@@ -81,17 +81,17 @@ Table 1: Model configuration
  In this segment we put forward the outcomes of training the model on our dataset with different layer configurations. We experimented with the dense layers and convolutional layers, each connected by a MaxPooling layer followed by a dropout and flatten layer. The results are presented in Table 2. We achieved the maximum accuracy 90.24% with 11-layer architecture with 4 dense layers and 3 convolution layers. In Fig 3 shows training and testing accuracies for the same.
  
 
-        Table 2: Results of training the model on the dataset based on different layer configurations
-		  
-		Layer Configuration	Training Accuracy	Testing Accuracy
-	+	11 Layer Configuration 
-		(5 dense layers, 2 convolutional layers)	70.07%	75.10%
-	+	9 Layer Configuration 
-		(3 dense layers, 2 convolutional layers)	79.50%	86.72%
-	+	10 Layer Configuration 
-		(4 dense layers, 2 convolutional layers)	82.50%	85.16%
-	+	11 Layer Configuration 
-		(4 dense layers, 3 convolutional layers)	89.22%	90.24%
+Table 2: Results of training the model on the dataset based on different layer configurations
+	  
+Layer Configuration	Training Accuracy	Testing Accuracy
++	11 Layer Configuration 
+	(5 dense layers, 2 convolutional layers)	70.07%	75.10%
++	9 Layer Configuration 
+	(3 dense layers, 2 convolutional layers)	79.50%	86.72%
++	10 Layer Configuration 
+	(4 dense layers, 2 convolutional layers)	82.50%	85.16%
++	11 Layer Configuration 
+	(4 dense layers, 3 convolutional layers)	89.22%	90.24%
 
 
 
@@ -106,14 +106,17 @@ Table 1: Model configuration
 
 
 Table 3: Results of testing the model using final 11-layer configuration with constant epoch value = 40 on the dataset based on different values for batch size
-	
-	Batch Size	Testing Accuracy
-+	  8	            90.24
-+	  16	            90.00
-+	  32	            87.31
+
+   Batch Size	      Testing Accuracy
++	8                   90.24
++	16	            90.00
++	32	            87.31
 
 
  
+
+![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/cef0f25d-5ce9-45fd-8521-0316a2ea7747)
+
 
 Fig. 4 Training accuracy and Testing accuracy
 
