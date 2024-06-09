@@ -12,7 +12,7 @@ In paper [4] authors have introduced a dataset Fruits-360 which contains various
 
 ##  METHODOLOGY
 
-1.	Dataset
+###	Dataset
 We have used the Fruits-360 dataset by extracting images from recording videos of fruits. The images from the **Fruits-360** dataset were not annotated or segregated according to the ripeness or maturity but instead according to the type of fruit. The dataset did not contain the images for all the 3 stages of every fruit so we captured and added them to the existing dataset. The videos were captured under proper illumination and plain white background. After recording, the video frames were extracted from the videos. We have used the OpenCV python library to extract frames from the video. After extracting the videos, we removed the background, reduced the noise from the images, and then cropped the image to focus on the fruit for better feature extractions. The preprocessing of images is depicted in Fig 1. The training dataset contains a total of **9997 images** of 5 different types of fruits which include _orange, pear, cherry, apple, and papaya_. There are a total of **15 classes** as we have divided each fruit into 3 categories: 
 1.	Unripe
 2.	Ripe/Fresh
@@ -37,19 +37,12 @@ Fig. 1: a) Frame extracted from video, b) Image after cropping, c) Image after r
 
 
 Fig. 2 presents the sample images from the dataset. We have split the dataset as 80 percent and 20 percent for training and testing purpose.  
-	
-a	b	c
-d	e	f
 
 
 
 
 
-
-
-
-
-
+![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/11f05168-d7b5-4117-a5c5-869a7275b1b0)
 
 
 
@@ -60,22 +53,21 @@ a)  Unripe Pear, b) Ripe Pear, c) Rot Pear, d) Unripe Cherry, e) Ripe Cherry, f)
 
 
 
-
-
-2. Architecture 
+### Architecture 
 
 The purpose of the work is to replicate the human vision in a CNN-based architecture which is proficient in segregating the fruit and its maturity stage just by examining a picture of it. After analyzing the literature, we have used a Sequential model of 10-layer convolutional neural network as shown in Fig 3. The neural network structures we are using consists of 3 convolutional layers intertwined with 2 max pooling layers. The output layer succeeds the last max-pooling layer which consists of one dropout layer, one flatten layer and four dense layers to reduce the dimensions and execute the maturity stage grading for the fruit. Using the Dropout layer, the number of neurons in this hidden layer was minimized to reduce overfitting. We have used total of 4 dense layers after implementing the flattening layers. The first dense layer, consisting of 5000 neurons, takes flattened image input from the preceding max-pooling layer. Successively, two more dense layers are implemented with 1024 and 512 neurons respectively. In the end, to predict each category of the fruits, a dense layer with 15 neurons was utilized as the output layer. In Table 1 we present the model configuration.
 
 
 
-
-
+![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/9413b89c-98b9-4daa-975a-9fc81ccccd54)
 
 
 Fig 3: 10-layer convolutional neural network Architecture of the model
 
 
 Table 1: Model configuration
+
+![image](https://github.com/Tej03/Fruits-Maturity-Detection/assets/82440905/fce15c68-3049-4c3b-9731-aafd1141315c)
 
  
  
